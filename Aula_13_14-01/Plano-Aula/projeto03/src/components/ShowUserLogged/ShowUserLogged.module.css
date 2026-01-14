@@ -1,0 +1,14 @@
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: tomato;
+}
+
+.nivel_ouro {
+  background-color: gold;
+}
+
+.nivel_prata {
+  background-color: silver;
+}

@@ -2,7 +2,7 @@ const PicturePet = ({ imagem }) => {
   return (
     <img
       src={imagem}
-      style={{ width: "100%", height: "350px", objectFit: "cover" }}
+      style={{ width: "100%", height: "200px", objectFit: "cover" }}
     />
   );
 };
