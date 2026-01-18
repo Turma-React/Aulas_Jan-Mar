@@ -1,0 +1,17 @@
+.mensagem {
+  font-size: 1.5em;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.aviso {
+  color: blue;
+}
+
+.atencao {
+  color: orange;
+}
+
+.erro {
+  color: red;
+}
