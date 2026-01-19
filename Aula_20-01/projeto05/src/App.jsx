@@ -39,6 +39,8 @@ function App() {
     setMedida("");
   };
 
+  const isOk = /\S/.test(item);
+
   const [estoque, setEstoque] = useState([]);
   const handleAddEstoque = () => {
     const novoItem = {
@@ -78,8 +80,9 @@ function App() {
         nome="adicionar"
         tipo="button"
         onClick={handleAddEstoque}
+        disabled={!isOk}
       />
-      <Button label="Limpar" nome="limpar" tipo="button" funcao={cleanForm} />
+      <Button label="Limpar" nome="limpar" tipo="button" onClick={cleanForm} />
       <h2>Estoque:</h2>
 
       {estoque.length > 0 ? (
