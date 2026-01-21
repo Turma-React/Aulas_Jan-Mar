@@ -93,6 +93,7 @@ function App() {
         tipo="button"
         onClick={cleanForm}
         value="Limpar"
+        disabled={!isOk}
       />
       <h3>
         Estoque: (Itens cadastrados: {estoque.length} / Soma das quantidades:{" "}
