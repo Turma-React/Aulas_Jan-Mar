@@ -1,0 +1,14 @@
+.field {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px;
+}
+
+.label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+}

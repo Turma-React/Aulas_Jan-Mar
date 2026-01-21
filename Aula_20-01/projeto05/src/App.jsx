@@ -75,7 +75,7 @@ function App() {
       />
       <Select
         name="medida"
-        label="Unidade de medida:"
+        label="Unidade de medida"
         options={medidas}
         value={medida}
         onChange={onChangeMedida}
