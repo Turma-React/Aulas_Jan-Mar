@@ -1,7 +1,8 @@
 import Button from "./components/Button";
 import InputText from "./components/InputText";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Select from "./components/Select";
+import DisplayList from "./components/DisplayList";
 
 function App() {
   const [item, setItem] = useState("");
@@ -52,6 +53,10 @@ function App() {
     cleanForm();
   };
 
+  const quantTotal = useMemo(() => {
+    return estoque.reduce((s, r) => s + r.quantidade, 0);
+  }, [estoque]);
+
   return (
     <>
       <InputText
@@ -82,17 +87,20 @@ function App() {
         onClick={handleAddEstoque}
         disabled={!isOk}
       />
-      <Button label="Limpar" nome="limpar" tipo="button" onClick={cleanForm} />
-      <h2>Estoque:</h2>
+      <Button
+        label="Limpar"
+        nome="limpar"
+        tipo="button"
+        onClick={cleanForm}
+        value="Limpar"
+      />
+      <h3>
+        Estoque: (Itens cadastrados: {estoque.length} / Soma das quantidades:{" "}
+        <b>{quantTotal}</b>)
+      </h3>
 
       {estoque.length > 0 ? (
-        <ul>
-          {estoque.map((produto, index) => (
-            <li key={index}>
-              {produto.item} - {produto.quantidade} {produto.medida}
-            </li>
-          ))}
-        </ul>
+        <DisplayList lista={estoque} />
       ) : (
         <h4>Estoque vazio</h4>
       )}
