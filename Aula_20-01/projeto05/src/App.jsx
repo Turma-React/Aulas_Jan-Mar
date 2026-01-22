@@ -54,6 +54,11 @@ function App() {
     return estoque.reduce((s, r) => s + r.quantidade, 0);
   }, [estoque]);
 
+  const [busca, setBusca] = useState("");
+  const estoqueFiltrado = useMemo(() => {
+    return estoque.filter((r) => r.item.toLowerCase() === busca.toLowerCase());
+  }, [busca, estoque]);
+
   return (
     <>
       <InputText
@@ -98,7 +103,19 @@ function App() {
       </h3>
 
       {estoque.length > 0 ? (
-        <DisplayList lista={estoque} />
+        <>
+          <h4>Busca por itens no estoque:</h4>
+          <InputText
+            nome="busca"
+            tipo="text"
+            label="Buscar item"
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+          />
+          <DisplayList
+            lista={estoqueFiltrado.length > 0 ? estoqueFiltrado : estoque}
+          />
+        </>
       ) : (
         <h4>Estoque vazio</h4>
       )}
