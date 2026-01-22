@@ -52,7 +52,7 @@ function App() {
     setEstoque((prev) => [...prev, novoItem]);
     cleanForm();
   };
-
+  //Soma das quantidades no estoque
   const quantTotal = useMemo(() => {
     return estoque.reduce((s, r) => s + r.quantidade, 0);
   }, [estoque]);

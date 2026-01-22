@@ -1,6 +1,5 @@
 import "./InputText.css";
 const Select = ({ label, name, options, value, onChange }) => {
-  console.log(options);
   return (
     <label htmlFor={name} className="label">
       {label}:
