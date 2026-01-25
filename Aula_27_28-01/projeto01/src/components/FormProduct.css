@@ -1,0 +1,82 @@
+/* Container Principal (Formulário) */
+.container {
+  max-width: 350px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilização do CardProduct (Conteúdo Interno) */
+.container h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.container img {
+  width: 100%; /* Ocupa a largura total do container */
+  height: 200px;
+  object-fit: contain; /* Garante que a imagem não distorça */
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.container p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Badge de Categoria e Avaliações */
+.container p:nth-of-type(2) {
+  font-style: italic;
+  color: #888;
+}
+
+.container span {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Estilização do Input e Botão */
+.container input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.container input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+.container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}

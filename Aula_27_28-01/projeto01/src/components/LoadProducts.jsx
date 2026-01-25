@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import FormCatalog from "./FormCatalog";
 const LoadProducts = () => {
   const [produtos, setProdutos] = useState([]);
   const [carregamento, setCarregamento] = useState(false);
@@ -32,6 +32,7 @@ const LoadProducts = () => {
   return (
     <section>
       <h3>Produtos da API FakeStore</h3>
+      <FormCatalog products={produtos} />
     </section>
   );
 };

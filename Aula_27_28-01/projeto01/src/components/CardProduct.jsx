@@ -1,23 +1,21 @@
-const CardProduct = ({
-  title,
-  description,
-  price,
-  category,
-  rate,
-  countRating,
-}) => {
+const CardProduct = ({ product }) => {
   return (
     <>
       <h4>
-        Produto: {title} - $ {price}
+        {product.title} - $ {product.price}
       </h4>
       <p>
-        {category}: {description}
+        <img src={product.image} alt={product.description} />
       </p>
       <p>
-        Veja o que os clientes falaram desse produto:
-        <span>Quantidade de avaliações: {countRating}</span>
-        <span>Nota média das avaliações: {rate}</span>
+        <b>{product.category}</b>: {product.description}
+      </p>
+      <p>
+        Mais informações:
+        <br />
+        <span>{product.rating?.count} avaliações</span>
+        <br />
+        <span>Nota média das avaliações: {product.rating?.rate}</span>
       </p>
     </>
   );
