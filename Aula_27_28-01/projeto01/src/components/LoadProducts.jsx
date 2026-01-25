@@ -31,7 +31,7 @@ const LoadProducts = () => {
 
   return (
     <section>
-      <h3>Produtos da API FakeStore</h3>
+      <h3 style={{ textAlign: "center" }}>Produtos da API FakeStore</h3>
       <FormCatalog products={produtos} />
     </section>
   );
