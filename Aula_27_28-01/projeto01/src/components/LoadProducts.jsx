@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FormCatalog from "./FormCatalog";
-const LoadProducts = () => {
+const LoadProducts = ({ addToCart }) => {
   const [produtos, setProdutos] = useState([]);
   const [carregamento, setCarregamento] = useState(false);
   const [erro, setErro] = useState(null);
@@ -29,12 +29,7 @@ const LoadProducts = () => {
 
   if (erro) return <h2>{erro}</h2>;
 
-  return (
-    <section>
-      <h3 style={{ textAlign: "center" }}>Produtos da API FakeStore</h3>
-      <FormCatalog products={produtos} />
-    </section>
-  );
+  return <FormCatalog products={produtos} addToCart={addToCart} />;
 };
 
 export default LoadProducts;

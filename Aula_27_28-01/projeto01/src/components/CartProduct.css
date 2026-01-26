@@ -1,0 +1,42 @@
+.clear-cart-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+
+  background-color: #e63946; /* vermelho de alerta */
+  color: #fff;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+/* Hover: deixa claro que é clicável */
+.clear-cart-button:hover {
+  background-color: #d62828;
+}
+
+/* Feedback de clique */
+.clear-cart-button:active {
+  transform: scale(0.97);
+}
+
+/* Acessibilidade básica */
+.clear-cart-button:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.order {
+  border: #064b02 dotted 2px;
+  margin: 2px;
+  padding: 2px;
+  list-style: none;
+}

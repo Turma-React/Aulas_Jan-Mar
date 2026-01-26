@@ -1,5 +1,28 @@
-const CartProduct = () => {
-  return <div></div>;
+import "./CartProduct.css";
+const CartProduct = ({ cart, onClearCart }) => {
+  return (
+    <div className="cart">
+      <h3>Carrinho de compras</h3>
+      {cart.length == 0 ? (
+        <p>O carrinho está vazio</p>
+      ) : (
+        <>
+          <button onClick={onClearCart} className="clear-cart-button">
+            Remover todos os produtos do carrinho
+          </button>
+          <ul>
+            {cart.map((order) => (
+              <li key={order.id} className="order">
+                <h6>{order.title}</h6>
+                <p>Quantidade: {order.quantity}</p>
+                <p>Subtotal: R$ {(order.price * order.quantity).toFixed(2)}</p>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
+  );
 };
 
 export default CartProduct;
