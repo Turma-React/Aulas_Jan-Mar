@@ -40,7 +40,7 @@ function App() {
     return cart.reduce((total, order) => {
       return total + order.price * order.quantity;
     }, 0);
-  });
+  }, [cart]);
 
   return (
     <main className="app-layout">

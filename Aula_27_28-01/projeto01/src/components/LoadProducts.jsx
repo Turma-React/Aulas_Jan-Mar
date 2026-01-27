@@ -22,7 +22,7 @@ const LoadProducts = ({ addToCart }) => {
         setCarregamento(true);
 
         // Endpoint da Fake Store API
-        const url = "https://fakestoreapi.com/products?limit=10";
+        const url = "https://fakestoreapi.com/products?limit=3";
 
         // Requisição HTTP
         const resposta = await fetch(url);
