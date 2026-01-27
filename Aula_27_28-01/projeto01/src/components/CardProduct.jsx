@@ -2,7 +2,7 @@ const CardProduct = ({ product }) => {
   return (
     <>
       <h4>
-        {product.title} - $ {product.price}
+        {product.title} - R$ {product.price}
       </h4>
       <p>
         <img src={product.image} alt={product.description} />

@@ -1,5 +1,5 @@
 import "./CartProduct.css";
-const CartProduct = ({ cart, onClearCart }) => {
+const CartProduct = ({ cart, onClearCart, sumTotal }) => {
   return (
     <div className="cart">
       <h3>Carrinho de compras</h3>
@@ -7,6 +7,13 @@ const CartProduct = ({ cart, onClearCart }) => {
         <p>O carrinho está vazio</p>
       ) : (
         <>
+          <h3 style={{ color: "green" }}>
+            Valor total:{" "}
+            {sumTotal.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
+          </h3>
           <button onClick={onClearCart} className="clear-cart-button">
             Remover todos os produtos do carrinho
           </button>
