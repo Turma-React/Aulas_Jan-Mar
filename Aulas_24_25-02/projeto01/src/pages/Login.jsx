@@ -1,6 +1,6 @@
 import { Form, useActionData, useNavigate } from "react-router-dom";
 import authService from "../api/authService";
-import { useAuth } from "../Hooks/useAuth";
+import { useAuth } from "../hooks/useAuth";
 import { useEffect } from "react";
 
 //Executado quando o Form for submetido
